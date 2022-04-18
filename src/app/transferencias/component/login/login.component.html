@@ -1,0 +1,41 @@
+  <!-- <p-card class="area">
+    <h2>Login</h2>
+    <div class="grid p-fluid form-login">
+      <div class="col-12 md:col-4">
+        <div class="p-inputgroup login">
+          <span class="p-inputgroup-addon"><i class="pi pi-user"></i></span>
+          <input type="text" pInputText placeholder="Login">
+        </div>
+      </div>
+      <div class="login">
+        <p-password placeholder="Senha"></p-password>
+      </div>
+    </div>
+    <button class="btnLogin" pButton type="button" label="Login"></button>
+  </p-card> -->
+
+
+
+  <nb-card class="login_form">
+    <nb-card-body class="form_input">
+      <h2>Login</h2>
+      <nb-form-field class="input_login">
+        <nb-icon nbPrefix icon="person-outline"  pack="eva"></nb-icon>
+        <input type="text" nbInput placeholder="Login">
+      </nb-form-field>
+      <nb-form-field class="input_senha">
+        <input [type]="getInputType()" nbInput placeholder="Senha">
+        <button nbSuffix nbButton ghost (click)="toggleShowPassword()">
+          <nb-icon [icon]="showPassword ? 'eye-outline' : 'eye-off-outline'"
+                   pack="eva"
+                   [attr.aria-label]="showPassword ? 'hide password' : 'show password'">
+          </nb-icon>
+        </button>
+
+      </nb-form-field>
+
+      <nb-checkbox class="lembrar" (checkedChange)="toggle($event)">Lembrar-me</nb-checkbox>
+      <button nbButton type="submit" class="btnLogin" status="primary">Login</button>
+
+    </nb-card-body>
+  </nb-card>

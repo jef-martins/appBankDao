@@ -1,0 +1,38 @@
+h2 {
+  text-align: center;
+  padding: 16px 0;
+  color: #333;
+}
+
+.form_acima, .form_abaixo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+#alerta, a {
+  display: flex;
+  font-size: 0.8rem;
+  justify-content: end;
+  color: rgb(160, 0, 0);
+  text-decoration: none;
+}
+
+.descricao {
+  height: 96px;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+}
+

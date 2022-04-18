@@ -1,0 +1,44 @@
+<form [formGroup]="depositoForm">
+
+  <nb-card>
+
+  <nb-card-header>
+    <h2>Depositar valor</h2>
+  </nb-card-header>
+
+  <nb-card-body>
+    <div class="form_acima">
+      <nb-select name="tipo" formControlName="tipo" class="tipo_conta input" placeholder="Selecione o tipo de conta" [(selected)]="selectedItem">
+        <nb-option value="1">Conta Corrente</nb-option>
+        <nb-option value="2">Conta poupança</nb-option>
+      </nb-select>
+      <input formControlName="conta" class="conta input" type="text" nbInput fullWidth placeholder="Número da conta">
+      <input formControlName="agencia" class="agencia input" type="text" nbInput fullWidth placeholder="Agência">
+    </div>
+    <div class="form_abaixo">
+      <input formControlName="saldo" class="saldo input" type="text" nbInput fullWidth placeholder="Saldo">
+      <input formControlName="doc" class="doc input" type="text" nbInput fullWidth placeholder="CPF/CNPJ">
+      <input  formControlName="data" nbInput class="data input" placeholder="Selecione a data" [nbDatepicker]="dateTimePicker">
+      <nb-datepicker #dateTimePicker></nb-datepicker>
+    </div>
+    <div class="descricao_area">
+      <textarea formControlName="descricao" class="descricao" nbInput fullWidth placeholder="Mensagem" #message maxlength="256"></textarea>
+      <span id="alerta">
+        <strong>Não escreva informações pessoais neste campo |</strong>
+        <a class="max_char">&nbsp;{{ message.value.length }} / 256 </a>
+      </span>
+    </div>
+
+  </nb-card-body>
+
+  <nb-card-footer >
+    <div class="botoes">
+
+      <button nbButton type="submit" class="depositar" status="success" (click)="deposito()" >Depositar</button>
+      <button nbButton class="cancelar" status="danger">Cancelar</button>
+    </div>
+  </nb-card-footer>
+
+</nb-card>
+
+</form>

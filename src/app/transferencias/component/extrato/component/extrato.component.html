@@ -1,0 +1,40 @@
+<nb-card>
+  <nb-card-body>
+
+    <nb-tabset fullWidth>
+     <nb-tab  tabTitle="Extrato" fullWidth tabIcon="credit-card-outline" responsive>
+
+        <table class="tabela_dados">
+          <thead class="cabeca_tabela">
+
+            <th>Tipo de conta</th>
+            <th>Nº da conta</th>
+            <th>Agência</th>
+            <th>Saldo</th>
+            <th>CPF/CNPJ</th>
+            <th>Descrição</th>
+            <th>Data</th>
+
+          </thead>
+
+          <tbody class="corpo_tabela" *ngIf="transferencia">
+            <tr *ngFor="let dados of transferencia" class="linha_tabela">
+              <td>{{dados.tipo}}</td>
+              <td>{{dados.conta}}</td>
+              <td>{{dados.agencia}}</td>
+              <td>{{dados.saldo}}</td>
+              <td>{{dados.doc}}</td>
+              <td>{{dados.descricao}}</td>
+              <td>{{dados.data}}</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </nb-tab>
+
+
+    </nb-tabset>
+
+  </nb-card-body>
+</nb-card>

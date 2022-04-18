@@ -1,0 +1,30 @@
+<form [formGroup]="depositoForm">
+
+  <nb-card>
+
+    <nb-card-header>
+      <h2>Sacar valor</h2>
+    </nb-card-header>
+
+    <nb-card-body>
+      <div class="form_acima">
+        <input formControlName="conta" class="conta input" type="text" nbInput fullWidth placeholder="Número da conta">
+      </div>
+      <div class="form_abaixo">
+        <input formControlName="saldo" class="saldo input" type="text" nbInput fullWidth placeholder="Saldo">
+
+      </div>
+
+
+    </nb-card-body>
+
+    <nb-card-footer>
+      <div class="botoes">
+        <button type="submit" nbButton class="sacar" status="success" (click)="deposito()">Sacar</button>
+        <button nbButton class="cancelar" status="danger">Cancelar</button>
+      </div>
+    </nb-card-footer>
+
+  </nb-card>
+
+</form>

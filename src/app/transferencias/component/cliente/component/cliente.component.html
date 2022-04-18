@@ -1,0 +1,64 @@
+<form [formGroup]="clienteForm">
+
+  <nb-card>
+    <nb-card-header class="header_cliente">
+
+      <h3 class="titulo">Área do Cliente</h3>
+
+    </nb-card-header>
+    <nb-card-body>
+
+      <div class="corpo_cliente">
+
+
+
+      <div class="form_edit">
+        <p>Login</p>
+        <input type="text" formControlName="login" nbInput placeholder="Login">
+      </div>
+      <div class="form_edit">
+        <p>Senha</p>
+        <input type="text" formControlName="senha" nbInput placeholder="Senha">
+      </div>
+      <div class="form_edit">
+        <p>Nome do Cliente</p>
+        <input type="text" formControlName="nome_usuario" nbInput placeholder="Nome do cliente">
+      </div>
+
+      <div class="botoes">
+        <button type="submit" nbButton class="editar" status="success"  (click)="cadastro()">Editar</button>
+        <button nbButton class="cancelar" status="danger">Cancelar</button>
+      </div>
+
+    </div>
+
+
+    </nb-card-body>
+    <nb-card-footer>
+
+      <table class="tabela_dados">
+        <thead class="cabeca_tabela">
+
+
+
+          <th>CPF/CNPJ</th>
+          <th>Descrição</th>
+          <th>Data</th>
+
+        </thead>
+
+        <tbody class="corpo_tabela" *ngIf="transferencia">
+          <tr *ngFor="let dados of transferencia" class="linha_tabela">
+
+
+            <td>{{dados.doc}}</td>
+            <td>{{dados.descricao}}</td>
+            <td>{{dados.data}}</td>
+          </tr>
+
+        </tbody>
+      </table>
+
+    </nb-card-footer>
+  </nb-card>
+</form>

@@ -1,0 +1,46 @@
+.header_cliente {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editar {
+  height: 40px;
+}
+
+.form_edit {
+  display: flex;
+  flex-direction: column;
+
+}
+
+input {
+  margin-bottom: 24px;
+  width: 400px;
+}
+
+.titulo{
+  align-items: center;
+margin: auto;
+}
+
+.corpo_cliente {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.status {
+  margin: auto;
+}
+
+.botoes {
+  display: flex;
+  justify-content: space-around;
+  padding: 16px 0;
+}
+
+p {
+  color: #333;
+  font-weight: 400;
+}

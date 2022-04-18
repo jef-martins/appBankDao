@@ -1,0 +1,29 @@
+.tabela_dados {
+  align-items: center;
+  text-align: center;
+  margin: auto;
+}
+
+.cabeca_tabela {
+  font-size: 1.1rem;
+
+}
+
+th {
+  padding: 8px 16px 8px;
+  background-color: #e0e0e0;
+  border-radius: 8px;
+  border-bottom: 1px solid #666;
+
+}
+
+td {
+  padding: 8px 0;
+
+}
+
+td{
+  border-bottom: 1px solid #666;
+  border-radius: 8px;
+
+}
